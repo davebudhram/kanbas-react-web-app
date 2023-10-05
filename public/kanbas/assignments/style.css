@@ -15,6 +15,9 @@
 .fa-circle-check, .assignment-icon {
   color:green;
 }
+.fa-circle-check {
+  opacity: 40%;
+}
 
 .btn-secondary {
   color:black;
