@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--GLOBAL STYLE SHEET-->
+    <link href="../style.css" rel="stylesheet"/>
+    <!--SIDEBAR STYLE SHEET-->
+    <link href="../sidebar/style.css" rel="stylesheet"/>
+     <!--NAVIGATION-SIDE AR STYLE SHEET-->
+    <link href="../navigation-sidebar/style.css" rel="stylesheet"/>
+    <!--GENERAL-PAGE STYLE SHEET-->
+    <link href="style.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-item"> 
+        <a href="../home.html">
+          <img class="northeastern-icon" src="../../images/northeastern_logo_icon.png">
+        </a>
+      </div>
+      <div class="sidebar-item sidebar-item-active"> 
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-regular fa-circle-user" style="font-size: 40px;"></i>
+          </div>
+          <div class="sidebar-item-text">Account</div>
+        </a>
+      </div>
+      <div class="sidebar-item"> 
+        <a href="../dashboard/index.html">
+          <div class="sidebar-item-icon ">
+            <i class="fa-solid fa-gauge"></i>
+          </div>
+          <div class="sidebar-item-text ">Dashboard</div>
+        </a>
+      </div>
+      <div class="sidebar-item"> 
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-solid fa-book"></i>
+          </div>
+          <div class="sidebar-item-text">Courses</div>
+        </a>
+      </div>
+      <div class="sidebar-item"> 
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <div class="sidebar-item-text">Calendar</div>
+        </a>
+      </div>
+      <div class="sidebar-item"> 
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-solid fa-inbox"></i>
+          </div>
+          <div class="sidebar-item-text">Inbox</div>
+        </a>
+      </div>
+      <div class="sidebar-item"> 
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <div class="sidebar-item-text">History</div>
+        </a>
+      </div>
+      <div class="sidebar-item"> 
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-solid fa-tv"></i>
+          </div>
+          <div class="sidebar-item-text">Studio</div>
+        </a>
+      </div>
+      <div class="sidebar-item"> 
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-brands fa-creative-commons-sa fa-flip-horizontal"></i>
+          </div>
+          <div class="sidebar-item-text">Commons</div>
+        </a>
+      </div>
+      <div class="sidebar-item"> 
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-regular fa-circle-question"></i>
+          </div>
+          <div class="sidebar-item-text">Help</div>
+        </a>
+      </div>
+    </div>
+    <div class="page">
+      <div class="page-header">
+          <i class="fa-solid fa-bars ms-1 me-4 red-icon" style="font-size: 30px;"></i>
+          <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="pt-3">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#" class="text-red text-decoration-none">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Library</li>
+            </ol>
+          </nav>
+          <button type="button" class="btn btn-secondary ms-auto" onclick="">
+            <i class="fa-solid fa-glasses"></i>
+            Student View
+          </button>
+      </div>
+      <div class="page-header-medium-container">
+        <div class="page-header-medium justify-content-between align-items-center">
+          <div>
+            <a data-bs-toggle="collapse" href="#topSideBar" role="button" aria-expanded="false" aria-controls="topSideBar" >
+              <i class="fa-solid fa-bars ms-3 " style="font-size: 30px; color: white;"></i>
+            </a>
+          </div>
+        
+          <div class="d-flex flex-column text-center">
+            <a class="text-white text-decoration-none" data-bs-toggle="collapse" href="#topNavBar" role="button" aria-expanded="false" aria-controls="topNavBar"></a>
+              <div class="text-white">
+                Hello 
+              </div>
+              <div>
+                hello 1
+              </div>
+            </a>
+            
+          </div>
+          <div class="me-3">
+            <a href="#" class="text-gray text-decoration-none me-2">
+              <i class="fa-solid fa-glasses" style="font-size: 25px; color: white;"></i>
+            </a>
+            <a data-bs-toggle="collapse" href="#topNavBar" role="button" aria-expanded="false" aria-controls="topNavBar" >
+              <i class="fa-solid fa-angle-down " id="angle-down" style="font-size: 30px; color: white;"></i>
+            </a>
+          </div>
+        </div>
+        <div class="collapse page-header-nav-bar" id="topNavBar">
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-house"></i>
+              Home
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-circle-nodes"></i>
+              Modules
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-plug"></i>
+              Piazza
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-plug"></i>
+              Zoom
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-regular fa-pen-to-square"></i>
+              Assignments
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-rocket"></i>Quizzes
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-book"></i>Grades
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-user-group"></i>
+              People
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-plug"></i>
+              Panopto Video
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-regular fa-comments"></i>
+              Discussions
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-bullhorn"></i>Announcements
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-regular fa-file-lines"></i>Pages
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-regular fa-folder"></i>
+             
+              Files
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-regular fa-clipboard"></i>Rubrics
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-bullseye"></i>
+              Outcomes
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-regular fa-circle"></i>
+              Collaborations
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-book"></i>
+              Syllabus
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-plug"></i>
+              Progress Reports (EAB Navigate)
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-gear"></i>
+              Settings
+            </a>
+          </div>
+     
+        </div>
+
+        <div class="collapse page-header-nav-bar" id="topSideBar">
+         <div class="d-flex flex-column p-5 bg-white">
+          <a class="ms-auto text-decoration-none" data-bs-toggle="collapse" href="#topSideBar" role="button" aria-expanded="true" aria-controls="topSideBar" >
+            <i class="fa-solid fa-xmark me-3" style="font-size: 30px; color: black;"></i>
+          </a>
+          <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" data-bs-toggle="collapse" href="#topSideBar" role="button" aria-expanded="true" aria-controls="topSideBar" >
+            <i class="fa-solid fa-gauge me-3" style="font-size:40px"></i>
+            <div>
+              Dashboard
+            </div>
+          </a>
+          <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" data-bs-toggle="collapse" href="#topSideBar" role="button" aria-expanded="true" aria-controls="topSideBar" >
+            <i class="fa-solid fa-circle-user me-3" style="font-size:40px"></i>
+            <div>
+              Account
+            </div>
+          </a>
+          <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" data-bs-toggle="collapse" href="#topSideBar" role="button" aria-expanded="true" aria-controls="topSideBar" >
+            <i class="fa-solid fa-book me-3" style="font-size:40px"></i>
+            <div>
+              Courses
+            </div>
+          </a>
+          <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" data-bs-toggle="collapse" href="#topSideBar" role="button" aria-expanded="true" aria-controls="topSideBar" >
+            <i class="fa-solid fa-calendar-days me-3" style="font-size:40px"></i>
+            <div>
+              Calendar
+            </div>
+          </a>
+          <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" data-bs-toggle="collapse" href="#topSideBar" role="button" aria-expanded="true" aria-controls="topSideBar" >
+            <i class="fa-solid fa-inbox me-3" style="font-size:40px"></i>
+            <div>
+              Inbox
+            </div>
+          </a>
+          <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" data-bs-toggle="collapse" href="#topSideBar" role="button" aria-expanded="true" aria-controls="topSideBar" >
+            <i class="fa-regular fa-clock me-3" style="font-size:40px"></i>
+            <div>
+              History
+            </div>
+          </a>
+          <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" data-bs-toggle="collapse" href="#topSideBar" role="button" aria-expanded="true" aria-controls="topSideBar" >
+            <i class="fa-solid fa-tv me-3" style="font-size:40px"></i>
+            <div>
+              Studio
+            </div>
+          </a>
+          <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" data-bs-toggle="collapse" href="#topSideBar" role="button" aria-expanded="true" aria-controls="topSideBar" >
+            <i class="fa-brands fa-creative-commons-sa fa-flip-horizontal me-3" style="font-size:40px"></i>
+            <div>
+              Commons
+            </div>
+          </a>
+          <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" data-bs-toggle="collapse" href="#topSideBar" role="button" aria-expanded="true" aria-controls="topSideBar" >
+            <i class="fa-regular fa-circle-question me-3" style="font-size:40px"></i>
+            <div>
+              Help
+            </div>
+          </a>
+         </div>
+     
+        </div>
+      </div>
+      <hr>
+      <div class="d-flex flex-row">
+        <div class="navigation-sidebar border">
+          <div class="navigation-sidebar-course">
+            202410_1 Fall 2023 Semester Full Term
+          </div>
+          <a href="#" class="navigation-sidebar-item">
+            Notifications
+          </a>
+          <a href="#" class="navigation-sidebar-item navigation-sidebar-item-active">
+            Profile
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            Settings
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            ePortfolios
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            Shared Content
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            The Hub
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            Qwuickly Course Tools
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            Global Announcements
+          </a>
+          
+        </div>
+        <div class="page-body border">
+          <!--ONLY ADD HTML HERE-->
+          hi
+        </div>
+      </div>
+    </div>
+<script>
+  
+</script>
+   
+  </body>
+</html>

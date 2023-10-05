@@ -1,0 +1,12 @@
+
+
+.border {
+  border-style: solid;
+  border-color: black;
+  border-width: 20px;
+}
+
+
+.grades-table {
+  width: 1200px;
+}

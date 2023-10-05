@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet">
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
+      rel="stylesheet">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--GLOBAL STYLE SHEET-->
+    <link href="../../style.css" rel="stylesheet" />
+    <!--SIDEBAR STYLE SHEET-->
+    <link href="../../sidebar/style.css" rel="stylesheet" />
+    <!--NAVIGATION-SIDE AR STYLE SHEET-->
+    <link href="../../navigation-sidebar/style.css" rel="stylesheet" />
+    <!--GENERAL-PAGE STYLE SHEET-->
+    <link href="../../general-page/style.css" rel="stylesheet" />
+    <!--This-PAGE STYLE SHEET-->
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-item">
+        <a href="../home.html">
+          <img class="northeastern-icon"
+            src="../../../images/northeastern_logo_icon.png">
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a href="../account/profile/index.html">
+          <div class="sidebar-item-icon">
+            <i class="fa-regular fa-circle-user" style="font-size: 40px;"></i>
+          </div>
+          <div class="sidebar-item-text">Account</div>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a href="../../dashboard/index.html">
+          <div class="sidebar-item-icon">
+            <i class="fa-solid fa-gauge"></i>
+          </div>
+          <div class="sidebar-item-text ">Dashboard</div>
+        </a>
+      </div>
+      <div class="sidebar-item sidebar-item-active">
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-solid fa-book"></i>
+          </div>
+          <div class="sidebar-item-text">Courses</div>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <div class="sidebar-item-text">Calendar</div>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-solid fa-inbox"></i>
+          </div>
+          <div class="sidebar-item-text">Inbox</div>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <div class="sidebar-item-text">History</div>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-solid fa-tv"></i>
+          </div>
+          <div class="sidebar-item-text">Studio</div>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-brands fa-creative-commons-sa fa-flip-horizontal"></i>
+          </div>
+          <div class="sidebar-item-text">Commons</div>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-regular fa-circle-question"></i>
+          </div>
+          <div class="sidebar-item-text">Help</div>
+        </a>
+      </div>
+    </div>
+    <div class="page">
+      <div class="page-header">
+        <i class="fa-solid fa-bars ms-1 me-4 red-icon" style="font-size: 30px;"></i>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb"
+          class="pt-3">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../../course/index.html"
+                class="text-red text-decoration-none">CS4550.12631.202410</a></li>
+            <li class="breadcrumb-item"><a href="../index.html"
+                class="text-red text-decoration-none">Assignments</a></li>
+            <li class="breadcrumb-item active" aria-current="page">A1 SETUP</li>
+          </ol>
+        </nav>
+        <button type="button" class="btn btn-secondary ms-auto" onclick="">
+          <i class="fa-solid fa-glasses"></i>
+          Student View
+        </button>
+      </div>
+      <div class="page-header-medium-container">
+        <div
+          class="page-header-medium justify-content-between align-items-center">
+          <div>
+            <a data-bs-toggle="collapse" href="#topSideBar" role="button"
+              aria-expanded="false" aria-controls="topSideBar">
+              <i class="fa-solid fa-bars ms-3 "
+                style="font-size: 30px; color: white;"></i>
+            </a>
+          </div>
+
+          <div class="d-flex text-center">
+            <a class="text-white text-decoration-none" data-bs-toggle="collapse" href="#topNavBar" role="button" aria-expanded="false" aria-controls="topNavBar">
+              <div>
+                CS4550.12631.202410
+              </div>
+              <div>
+                Assignments
+              </div>
+            </a>
+
+          </div>
+          <div class="me-3">
+            <a href="#" class="text-gray text-decoration-none me-2">
+              <i class="fa-solid fa-glasses"
+                style="font-size: 25px; color: white;"></i>
+            </a>
+            <a data-bs-toggle="collapse" href="#topNavBar" role="button"
+              aria-expanded="false" aria-controls="topNavBar">
+              <i class="fa-solid fa-angle-down " id="angle-down"
+                style="font-size: 30px; color: white;"></i>
+            </a>
+          </div>
+        </div>
+        <div class="collapse page-header-nav-bar" id="topNavBar">
+          <div>
+            <a href="../../course/index.html" class="text-red text-decoration-none">
+              <i class="fa-solid fa-house"></i>
+              Home
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-circle-nodes"></i>
+              Modules
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-plug"></i>
+              Piazza
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-plug"></i>
+              Zoom
+            </a>
+          </div>
+          <div>
+            <a href="../index.html" class="text-red text-decoration-none">
+              <i class="fa-regular fa-pen-to-square "></i>
+              Assignments
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-rocket"></i>Quizzes
+            </a>
+          </div>
+          <div>
+            <a href="../../grades/index.html" class="text-red text-decoration-none">
+              <i class="fa-solid fa-book"></i>Grades
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-user-group"></i>
+              People
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-plug"></i>
+              Panopto Video
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-regular fa-comments"></i>
+              Discussions
+              
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-bullhorn"></i>Announcements
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-regular fa-file-lines"></i>Pages
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-regular fa-folder"></i>
+
+              Files
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-regular fa-clipboard"></i>Rubrics
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-bullseye"></i>
+              Outcomes
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-regular fa-circle"></i>
+              Collaborations
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-book"></i>
+              Syllabus
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-plug"></i>
+              Progress Reports (EAB Navigate)
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-gear"></i>
+              Settings
+            </a>
+          </div>
+
+        </div>
+
+        <div class="collapse page-header-nav-bar" id="topSideBar">
+          <div class="d-flex flex-column p-5 bg-white">
+           <a class="ms-auto text-decoration-none" data-bs-toggle="collapse" href="#topSideBar" role="button" aria-expanded="true" aria-controls="topSideBar" >
+             <i class="fa-solid fa-xmark me-3" style="font-size: 30px; color: black;"></i>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="../../dashboard/index.html" >
+             <i class="fa-solid fa-gauge me-3" style="font-size:40px"></i>
+             <div>
+               Dashboard
+             </div>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="../../account/profile/index.html" >
+             <i class="fa-solid fa-circle-user me-3" style="font-size:40px"></i>
+             <div>
+               Account
+             </div>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="#" >
+             <i class="fa-solid fa-book me-3" style="font-size:40px"></i>
+             <div>
+               Courses
+             </div>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="#" >
+             <i class="fa-solid fa-calendar-days me-3" style="font-size:40px"></i>
+             <div>
+               Calendar
+             </div>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="#" >
+             <i class="fa-solid fa-inbox me-3" style="font-size:40px"></i>
+             <div>
+               Inbox
+             </div>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="#" >
+             <i class="fa-regular fa-clock me-3" style="font-size:40px"></i>
+             <div>
+               History
+             </div>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="#" >
+             <i class="fa-solid fa-tv me-3" style="font-size:40px"></i>
+             <div>
+               Studio
+             </div>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="#" >
+             <i class="fa-brands fa-creative-commons-sa fa-flip-horizontal me-3" style="font-size:40px"></i>
+             <div>
+               Commons
+             </div>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="#" >
+             <i class="fa-regular fa-circle-question me-3" style="font-size:40px"></i>
+             <div>
+               Help
+             </div>
+           </a>
+          </div>
+      
+         </div>
+      </div>
+      <hr>
+      <div class="d-flex flex-row">
+        <div class="navigation-sidebar">
+          <div class="navigation-sidebar-course">
+            202410_1 Fall 2023 Semester Full Term
+          </div>
+          <a href="../../course/index.html" class="navigation-sidebar-item">
+            Home
+          </a>
+          <a href="#" class="navigation-sidebar-item ">
+            Modules
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            Piazza
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            Zoom Meetings
+          </a>
+          <a href="../index.html"
+            class="navigation-sidebar-item navigation-sidebar-item-active">
+            Assignments
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            Quizzes
+          </a>
+          <a href="../../grades/index.html" class="navigation-sidebar-item">
+            Grades
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            People
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            Panopto Video
+          </a>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <a href="#" class="navigation-sidebar-item justify-content-between">
+              Discussions
+              
+            </a>
+            <i class="fa-regular fa-eye-slash ms-auto text-gray"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <a href="#" class="navigation-sidebar-item justify-content-between">
+              Announcements
+            </a>
+            <i class="fa-regular fa-eye-slash ms-auto text-gray"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <a href="#" class="navigation-sidebar-item justify-content-between">
+              Pages
+            </a>
+            <i class="fa-regular fa-eye-slash ms-auto text-gray"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <a href="#" class="navigation-sidebar-item justify-content-between">
+              Files
+            </a>
+            <i class="fa-regular fa-eye-slash ms-auto text-gray"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <a href="#" class="navigation-sidebar-item justify-content-between">
+              Rubrics
+            </a>
+            <i class="fa-regular fa-eye-slash ms-auto text-gray"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <a href="#" class="navigation-sidebar-item justify-content-between">
+              Outcomes
+            </a>
+            <i class="fa-regular fa-eye-slash ms-auto text-gray"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <a href="#" class="navigation-sidebar-item justify-content-between">
+              Collaborations
+            </a>
+            <i class="fa-regular fa-eye-slash ms-auto text-gray"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <a href="#" class="navigation-sidebar-item justify-content-between">
+              Syllabus
+            </a>
+            <i class="fa-regular fa-eye-slash ms-auto text-gray"></i>
+          </div>
+          <a href="#" class="navigation-sidebar-item">
+            Progress Reports (EAB Navigate)
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            Settings
+          </a>
+
+        </div>
+        <div class="page-body">
+          <!--ONLY ADD HTML HERE-->
+
+          <div class="d-flex flex-row justify-content-end align-items-center mb-3">
+            <div class="me-3" style="color:green">
+              <i class="fa-solid fa-circle-check "></i>
+              Published
+            </div>
+            <button type="button" class="btn btn-secondary" onclick>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </div>
+          <hr class="mb-3">
+          <div class="d-flex flex-column mb-3">
+            <label for="assignment-name"
+              class="form-label">
+              Assignment Name</label>
+            <input type="text"
+              class="form-control mb-4"
+              id="assignment-name"
+              placeholder="Enter assignment name">
+            <textarea class="form-control"
+              id="assignment-description"
+              rows="3">This assignment describes how to install the development environment for creating and working with Web applications we will be developing this semester. We will add new content every week, pushing the code to a GitHub source repository, and then deploying the content to a remote server hosted on Netlify.</textarea>
+          </div>
+     
+          <div class="d-flex flex-column mb-2">
+            <div class="row mb-3">
+              <div class="col-3 text-end pt-2">
+                <label for="assignment-points"
+                  class="form-label me-3">
+                  Points</label>
+              </div>
+              <div class="col-6 text-start ">
+                <input type="number"
+                  class="form-control"
+                  id="assignment-points"
+                  placeholder="Enter assignment name">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-3 text-end pt-2">
+                <label for="assignment-type"
+                  class="form-label me-3">
+                  Assignment Group</label>
+              </div>
+              <div class="col-6 text-start ">
+                <select class="form-select" id="assigment-type">
+                  <option selected>ASSIGNMENTS</option>
+                  <option value="1">EXAMS</option>
+                  <option value="2">QUIZZES</option>
+                  <option value="3">PROJECTS</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-3 text-end pt-2">
+                <label for="assignment-display-grade"
+                  class="form-label me-3">
+                  Display Grade As</label>
+              </div>
+              <div class="col-6 text-start ">
+                <select class="form-select" id="assignment-display-grade">
+                  <option selected>Percentage</option>
+                  <option value="1">EXAMS</option>
+                  <option value="2">QUIZZES</option>
+                  <option value="3">PROJECTS</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-3 text-end pt-2">
+                <label for="assignment-submission-type"
+                  class="form-label me-3">
+                  Submission Type</label>
+              </div>
+              <div class="col-6 text-start">
+                <div class="border border-secondary">
+                  <div class="ms-3">
+                    <select class="form-select w-50 mt-3"
+                      id="assignment-submission-type">
+                      <option selected>Online</option>
+                      <option value="1">Why you looking at all this man?</option>
+
+                    </select>
+                    <h6 class="mt-3">Online Submission Options</h6>
+                    <div class="form-check mt-3">
+                      <input class="form-check-input" type="checkbox"
+                        value="Text Entry" id="text-entry" checked>
+                      <label class="form-check-label" for="text-entry">
+                        Text Entry
+                      </label>
+                    </div>
+                    <div class="form-check mt-3">
+                      <input class="form-check-input" type="checkbox"
+                        value="Text Entry" id="website-url" checked>
+                      <label class="form-check-label" for="website-url">
+                        Website URL
+                      </label>
+                    </div>
+
+                    <div class="form-check mt-3">
+                      <input class="form-check-input" type="checkbox"
+                        value="Text Entry" id="media-recordings" checked>
+                      <label class="form-check-label" for="media-recordings">
+                        Media Recordings
+                      </label>
+                    </div>
+
+                    <div class="form-check mt-3">
+                      <input class="form-check-input" type="checkbox"
+                        value="Text Entry" id="student-annotation">
+                      <label class="form-check-label" for="student-annotation">
+                        Student Annotation
+                      </label>
+                    </div>
+
+                    <div class="form-check mt-3 mb-3">
+                      <input class="form-check-input" type="checkbox"
+                        value="Text Entry" id="file-uploads">
+                      <label class="form-check-label" for="file-uploads">
+                        File Uploads
+                      </label>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-3 text-end pt-2">
+                <label for="assignment-assign-to"
+                  class="form-label me-3">
+                  Assign</label>
+              </div>
+              <div class="col-6 text-start" id="assingment-assign-to">
+                <div class="border border-secondary">
+                  <div class="ms-3 me-3">
+                    <label for="assignment-assign-to-input"
+                      class="form-label mt-3" style="font-weight: bolder;">
+                      Assignment Name</label>
+                    <input type="text"
+                      class="form-control"
+                      id="assignment-assign-to-input"
+                      placeholder value="Everyone">
+
+                    <label for="assignment-assign-to-input"
+                      class="form-label mt-3" style="font-weight: bolder;">
+                      Due</label>
+
+                    <input type="date"
+                      class="form-control"
+                      id="assignment-assign-to-input"
+                      placeholder value="Everyone">
+
+                    <div class="row">
+                      <div class="col">
+                        <label for="assignment-assign-to-input"
+                          class="form-label mt-3" style="font-weight: bolder;">
+                          Available From</label>
+                        <input type="date"
+                          class="form-control mb-3"
+                          id="assignment-assign-to-input"
+                          placeholder value="Everyone">
+                      </div>
+                      <div class="col">
+                        <label for="assignment-assign-to-input"
+                          class="form-label mt-3" style="font-weight: bolder;">
+                          Until</label>
+                        <input type="date"
+                          class="form-control mb-3"
+                          id="assignment-assign-to-input"
+                          placeholder value="Everyone">
+                      </div>
+                    </div>
+
+                  </div>
+                  <button type="button" class="btn btn-secondary flex-fill w-100 border-0" onclick>
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+               
+               
+              </div>
+            </div>
+
+           
+
+          </div>
+          <hr class="mb-2">
+          <div class="d-flex flex-row justify-content-between align-items-center mb-5">
+            <div>
+              <input class="form-check-input"
+              type="checkbox" id="r6"/>
+              <label class="form-check-label" for="r6">
+           Notify users that this content has changed</label>
+
+            </div>
+            <div class="d-flex flex-row">
+              <button type="button" class="btn btn-secondary me-2" onclick="window.location.href='../index.html'">
+                Cancel
+              </button>
+              <button type="button" class="btn btn-danger" onclick="window.location.href='../index.html'">
+                Save
+              </button>
+            </div>
+           
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <script>
+  
+</script>
+
+  </body>
+</html>

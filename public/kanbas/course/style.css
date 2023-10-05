@@ -1,0 +1,106 @@
+.fa-circle-check {
+  color:green;
+}
+
+.green-left-border {
+  border-left: 5px solid green;
+}
+
+.border {
+  border-style: solid;
+  border-color: black;
+  border-width: 20px;
+}
+
+.fa-circle-check {
+  color:green;
+}
+
+.btn-secondary {
+  color:black;
+  background-color: lightgray;
+}
+
+
+.module-link:hover {
+  color:red;
+  text-decoration: underline;
+}
+
+.breadcrumb-item-course {
+  color:red;
+}
+
+.breadcrumb-item-course:hover{
+  text-decoration: underline;
+  color:red;
+}
+
+
+.course-sidebar {
+  width: 250px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.to-do-number {
+  background-color: red;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 20px;
+  height: 20px;
+  overflow: hidden; 
+  display: flex;
+  font-size: 15px;
+  line-height: 15px;
+
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.to-do-item-date {
+  font-size: 10px;
+}
+
+.to-do-item-x {
+  margin-left:auto;
+  margin-right:5px;
+  align-self: flex-start
+}
+
+
+/* NEW CSS CAN BE PUT IN GENERAL */
+
+.right-sidebar {
+  /* width: 300px; */
+  padding-top:10px;
+  padding-left:10px;
+  padding-left:10px;
+  /* margin-left: auto; */
+}
+
+.page-body{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.page-body-inner {
+  margin-right:20px;
+}
+
+@media (max-width: 1139px){
+  .right-sidebar {
+    width: 100%;
+  }
+
+  .page-body-inner {
+    margin-right:0px;
+  }
+ 
+}

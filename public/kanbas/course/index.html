@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet">
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
+      rel="stylesheet">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--GLOBAL STYLE SHEET-->
+    <link href="../style.css" rel="stylesheet" />
+    <!--SIDEBAR STYLE SHEET-->
+    <link href="../sidebar/style.css" rel="stylesheet" />
+    <!--NAVIGATION-SIDE AR STYLE SHEET-->
+    <link href="../navigation-sidebar/style.css" rel="stylesheet" />
+    <!--GENERAL-PAGE STYLE SHEET-->
+    <link href="../general-page/style.css" rel="stylesheet" />
+    <!--This-PAGE STYLE SHEET-->
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-item">
+        <a href="../home.html">
+          <img class="northeastern-icon"
+            src="../../images/northeastern_logo_icon.png">
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a href="../account/profile/index.html">
+          <div class="sidebar-item-icon">
+            <i class="fa-regular fa-circle-user" style="font-size: 40px;"></i>
+          </div>
+          <div class="sidebar-item-text">Account</div>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a href="../dashboard/index.html">
+          <div class="sidebar-item-icon">
+            <i class="fa-solid fa-gauge"></i>
+          </div>
+          <div class="sidebar-item-text ">Dashboard</div>
+        </a>
+      </div>
+      <div class="sidebar-item sidebar-item-active">
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-solid fa-book"></i>
+          </div>
+          <div class="sidebar-item-text">Courses</div>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <div class="sidebar-item-text">Calendar</div>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-solid fa-inbox"></i>
+          </div>
+          <div class="sidebar-item-text">Inbox</div>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <div class="sidebar-item-text">History</div>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-solid fa-tv"></i>
+          </div>
+          <div class="sidebar-item-text">Studio</div>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-brands fa-creative-commons-sa fa-flip-horizontal"></i>
+          </div>
+          <div class="sidebar-item-text">Commons</div>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a ref="#">
+          <div class="sidebar-item-icon">
+            <i class="fa-regular fa-circle-question"></i>
+          </div>
+          <div class="sidebar-item-text">Help</div>
+        </a>
+      </div>
+    </div>
+    <div class="page">
+      <div class="page-header">
+        <i class="fa-solid fa-bars ms-1 me-4 red-icon" style="font-size: 30px;"></i>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb"
+          class="pt-3">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#"
+                class="text-red text-decoration-none">CS4550.12631.202410</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Modules</li>
+          </ol>
+        </nav>
+        <button type="button" class="btn btn-secondary ms-auto" onclick="">
+          <i class="fa-solid fa-glasses"></i>
+          Student View
+        </button>
+      </div>
+      <div class="page-header-medium-container">
+        <div class="page-header-medium justify-content-between align-items-center">
+          <div>
+            <a data-bs-toggle="collapse" href="#topSideBar" role="button" aria-expanded="false" aria-controls="topSideBar" >
+              <i class="fa-solid fa-bars ms-3 " style="font-size: 30px; color: white;"></i>
+            </a>
+          </div>
+        
+          <div class="d-flex text-center">
+            <a class="text-white text-decoration-none" data-bs-toggle="collapse" href="#topNavBar" role="button" aria-expanded="false" aria-controls="topNavBar">
+              <div>
+                CS4550.12631.202410
+              </div>
+              <div>
+                Modules
+              </div>
+            </a>
+            
+          </div>
+          <div class="me-3">
+            <a href="#" class="text-gray text-decoration-none me-2">
+              <i class="fa-solid fa-glasses" style="font-size: 25px; color: white;"></i>
+            </a>
+            <a data-bs-toggle="collapse" href="#topNavBar" role="button" aria-expanded="false" aria-controls="topNavBar" >
+              <i class="fa-solid fa-angle-down " id="angle-down" style="font-size: 30px; color: white;"></i>
+            </a>
+          </div>
+        </div>
+        <div class="collapse page-header-nav-bar" id="topNavBar">
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-house"></i>
+              Home
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-circle-nodes"></i>
+              Modules
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-plug"></i>
+              Piazza
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-plug"></i>
+              Zoom
+            </a>
+          </div>
+          <div>
+            <a href="../assignments/index.html" class="text-red text-decoration-none">
+              <i class="fa-regular fa-pen-to-square"></i>
+              Assignments
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-rocket"></i>Quizzes
+            </a>
+          </div>
+          <div>
+            <a href="../grades/index.html" class="text-red text-decoration-none">
+              <i class="fa-solid fa-book"></i>Grades
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-user-group"></i>
+              People
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-plug"></i>
+              Panopto Video
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-regular fa-comments"></i>
+              Discussions
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-bullhorn"></i>Announcements
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-regular fa-file-lines"></i>Pages
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-regular fa-folder"></i>
+             
+              Files
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-regular fa-clipboard"></i>Rubrics
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-bullseye"></i>
+              Outcomes
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-regular fa-circle"></i>
+              Collaborations
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-book"></i>
+              Syllabus
+              <i class="fa-regular fa-eye-slash ms-3 text-gray"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-plug"></i>
+              Progress Reports (EAB Navigate)
+            </a>
+          </div>
+          <div>
+            <a href="#" class="text-red text-decoration-none">
+              <i class="fa-solid fa-gear"></i>
+              Settings
+            </a>
+          </div>
+     
+        </div>
+
+        <div class="collapse page-header-nav-bar" id="topSideBar">
+          <div class="d-flex flex-column p-5 bg-white">
+           <a class="ms-auto text-decoration-none" data-bs-toggle="collapse" href="#topSideBar" role="button" aria-expanded="true" aria-controls="topSideBar" >
+             <i class="fa-solid fa-xmark me-3" style="font-size: 30px; color: black;"></i>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="../dashboard/index.html" >
+             <i class="fa-solid fa-gauge me-3" style="font-size:40px"></i>
+             <div>
+               Dashboard
+             </div>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="../account/profile/index.html" >
+             <i class="fa-solid fa-circle-user me-3" style="font-size:40px"></i>
+             <div>
+               Account
+             </div>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="#" >
+             <i class="fa-solid fa-book me-3" style="font-size:40px"></i>
+             <div>
+               Courses
+             </div>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="#" >
+             <i class="fa-solid fa-calendar-days me-3" style="font-size:40px"></i>
+             <div>
+               Calendar
+             </div>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="#" >
+             <i class="fa-solid fa-inbox me-3" style="font-size:40px"></i>
+             <div>
+               Inbox
+             </div>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="#" >
+             <i class="fa-regular fa-clock me-3" style="font-size:40px"></i>
+             <div>
+               History
+             </div>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="#" >
+             <i class="fa-solid fa-tv me-3" style="font-size:40px"></i>
+             <div>
+               Studio
+             </div>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="#" >
+             <i class="fa-brands fa-creative-commons-sa fa-flip-horizontal me-3" style="font-size:40px"></i>
+             <div>
+               Commons
+             </div>
+           </a>
+           <a class="text-decoration-none text-red  d-flex flex-row align-items-center mb-3" href="#" >
+             <i class="fa-regular fa-circle-question me-3" style="font-size:40px"></i>
+             <div>
+               Help
+             </div>
+           </a>
+          </div>
+      
+         </div>
+      </div>
+      <hr>
+      <div class="d-flex flex-row">
+        <div class="navigation-sidebar">
+          <div class="navigation-sidebar-course">
+            202410_1 Fall 2023 Semester Full Term
+          </div>
+          <a href="#" class="navigation-sidebar-item navigation-sidebar-item-active">
+            Home
+          </a>
+          <a href="#"
+            class="navigation-sidebar-item ">
+            Modules
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            Piazza
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            Zoom Meetings
+          </a>
+          <a href="../assignments/index.html" class="navigation-sidebar-item">
+            Assignments
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            Quizzes
+          </a>
+          <a href="../grades/index.html" class="navigation-sidebar-item">
+            Grades
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            People
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            Panopto Video
+          </a>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <a href="#" class="navigation-sidebar-item justify-content-between">
+              Discussions
+              
+            </a>
+            <i class="fa-regular fa-eye-slash ms-auto text-gray"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <a href="#" class="navigation-sidebar-item justify-content-between">
+              Announcements
+            </a>
+            <i class="fa-regular fa-eye-slash ms-auto text-gray"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <a href="#" class="navigation-sidebar-item justify-content-between">
+              Pages
+            </a>
+            <i class="fa-regular fa-eye-slash ms-auto text-gray"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <a href="#" class="navigation-sidebar-item justify-content-between">
+              Files
+            </a>
+            <i class="fa-regular fa-eye-slash ms-auto text-gray"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <a href="#" class="navigation-sidebar-item justify-content-between">
+              Rubrics
+            </a>
+            <i class="fa-regular fa-eye-slash ms-auto text-gray"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <a href="#" class="navigation-sidebar-item justify-content-between">
+              Outcomes
+            </a>
+            <i class="fa-regular fa-eye-slash ms-auto text-gray"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <a href="#" class="navigation-sidebar-item justify-content-between">
+              Collaborations
+            </a>
+            <i class="fa-regular fa-eye-slash ms-auto text-gray"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <a href="#" class="navigation-sidebar-item justify-content-between">
+              Syllabus
+            </a>
+            <i class="fa-regular fa-eye-slash ms-auto text-gray"></i>
+          </div>
+          <a href="#" class="navigation-sidebar-item">
+            Progress Reports (EAB Navigate)
+          </a>
+          <a href="#" class="navigation-sidebar-item">
+            Settings
+          </a>
+
+        </div>
+        <!--ONLY ADD HTML HERE-->
+        <div class="page-body">
+         
+            <div class="page-body-inner flex-fill">
+              <div class="d-flex flex-row justify-content-end mb-3">
+                <button type="button" class="btn btn-secondary me-1 text-nowrap" onclick>
+                  Collapse All
+                </button>
+                <button type="button" class="btn btn-secondary me-1 text-nowrap" onclick>
+                  View Progress
+                </button>
+                <div class="dropdown me-1">
+                  <button class="btn btn-secondary dropdown-toggle text-nowrap" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-regular fa-circle-check"></i>
+                    Publish
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+                <button type="button" class="btn btn-danger me-1 text-nowrap" onclick>
+                  <i class="fa-regular fa-plus"></i>
+                  Module
+                </button>
+                <button type="button" class="btn btn-secondary text-nowrap" onclick>
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+              </div>
+              <hr class="mb-3">
+              <div class="module mb-3">
+                <ul class="list-group">
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center border-0 gray-background">
+                    <i class="fa-solid fa-ellipsis-vertical ms-1 me-1"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3"></i>
+                    Week 0 - INTRO
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-plus me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    LEARNING OBJECTIVES
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <text class="ms-4">Introduction to the course
+                    </text>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <text class="ms-4">Learn What is Web Development
+                    </text>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <text class="ms-4">Creating a Development Environment
+                    </text>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+  
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <text class="ms-4">Creating a Web Application
+                    </text>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+  
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <text class="ms-4">Getting Started with the 1st Assignment
+                    </text>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+  
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    READING
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+  
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <text class="ms-4">Full Stack Developer Chapter 1
+                    </text>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+  
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <text class="ms-4">Full Stack Developer Chapter 2
+                    </text>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+  
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    SLIDES
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+  
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <i class="fa-solid fa-link text-success"></i>
+                    <a class="ms-2 module-link text-red text-decoration-none" href="youtube.com">Introduction
+                      to Web Development
+                      <i class="fa-solid fa-arrow-up-right-from-square text-red"></i>
+                    </a>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <i class="fa-solid fa-link text-success"></i>
+                    <a class="ms-2 module-link text-red text-decoration-none" href="youtube.com">Creating
+                      a React Application
+                      <i class="fa-solid fa-arrow-up-right-from-square text-red"></i>
+                    </a>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+  
+                </ul>
+              </div>
+              <div class="module mb-3">
+                <ul class="list-group">
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center border-0 gray-background">
+                    <i class="fa-solid fa-ellipsis-vertical ms-1 me-1"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3"></i>
+                    Week 1 - Something
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-plus me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    LEARNING OBJECTIVES
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <text class="ms-4">Introduction to the course
+                    </text>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <text class="ms-4">Learn What is Web Development
+                    </text>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <text class="ms-4">Creating a Development Environment
+                    </text>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+  
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <text class="ms-4">Creating a Web Application
+                    </text>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+  
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <text class="ms-4">Getting Started with the 1st Assignment
+                    </text>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+  
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    READING
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+  
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <text class="ms-4">Full Stack Developer Chapter 1
+                    </text>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+  
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <text class="ms-4">Full Stack Developer Chapter 2
+                    </text>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+  
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    SLIDES
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+  
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <i class="fa-solid fa-link text-success"></i>
+                    <a class="ms-2 module-link text-red text-decoration-none" href="youtube.com">Introduction
+                      to Web Development
+                      <i class="fa-solid fa-arrow-up-right-from-square text-red"></i>
+                    </a>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+                  <li
+                    class="list-group-item d-flex flex-row align-items-center green-left-border">
+                    <i class="fa-solid fa-ellipsis-vertical me-1 "></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-3 "></i>
+                    <i class="fa-solid fa-link text-success"></i>
+                    <a class="ms-2 module-link text-red text-decoration-none" href="youtube.com">Creating
+                      a React Application
+                      <i class="fa-solid fa-arrow-up-right-from-square text-red"></i>
+                    </a>
+                    <i class="fa-solid fa-circle-check ms-auto me-2"></i>
+                    <i class="fa-solid fa-ellipsis-vertical me-2"></i>
+  
+                  </li>
+  
+                </ul>
+              </div>
+            </div>
+            <div class="right-sidebar">
+              <div class="d-flex flex-column"> 
+              <div>Course Status</div>
+              <div class="d-flex flex-row mb-3 ">
+                <button type="button" class="btn btn-secondary flex-fill" onclick="">
+                  <i class="fa-regular fa-circle-xmark"></i>
+                  Unpublish
+                </button>
+                <button type="button" class="btn btn-success flex-fill" disabled onclick="">
+                  <i class="fa-regular fa-circle-check" style="color:black"></i>
+                  Published 
+                </button>
+              </div>
+              <button type="button" class="btn btn-secondary text-start mt-2 mb-1 " onclick="">
+                <i class="fa-solid fa-file-import"></i>
+                Import Existing Content
+              </button>
+              <button type="button" class="btn btn-secondary text-start mb-1" onclick="">
+                <i class="fa-solid fa-file-import"></i>
+                Import From Commons
+              </button>
+              <button type="button" class="btn btn-secondary text-start mb-1" onclick="">
+                <i class="fa-solid fa-arrows-to-circle"></i>
+                Choose Home Page
+              </button>
+              <button type="button" class="btn btn-secondary text-start mb-1" onclick="">
+                <i class="fa-solid fa-chart-column"></i>
+                View Course Stream
+              </button>
+              <button type="button" class="btn btn-secondary text-start mb-1" onclick="">
+                <i class="fa-solid fa-bullhorn"></i>
+                New Announcement
+              </button>
+              <button type="button" class="btn btn-secondary text-start mb-1" onclick="">
+                <i class="fa-solid fa-chart-column"></i>
+                New Analytics
+              </button>
+              <button type="button" class="btn btn-secondary text-start mb-1" onclick="">
+                <i class="fa-regular fa-bell"></i>
+                New Course Notifications
+              </button>
+          
+    
+              <div>
+                <div class="mt-3">
+                  To Do
+                </div>
+                <hr class="mt-0">
+                <div class=" mt-2 to-do-item d-flex flex-row">
+                  <div class="to-do-number ms-2">1</div>
+                  <div class="d-flex flex-column ms-2">
+                    <div class="font-size-12 text-red">
+                      Grade A1 - ENV + HTML
+                    </div>
+                    <div class="text-secondary to-do-item-date">
+                      100 points &middot; Sept 18th @ 11:59pm
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-xmark to-do-item-x"></i>
+                </div>
+              </div>
+    
+                <div>
+                  <div class="d-flex flex-row align-items-center mt-3">
+                    Coming up
+                    <i class="fa-regular fa-calendar ms-auto me-1"></i>
+                      <a  class="text-red text-decoration-none font-size-12" href="#">
+                        View Calendar
+                      </a>
+                  </div>
+                  <hr>
+                  <div class="d-flex flex-row mt-2">
+                    <i class="fa-regular fa-calendar me-3"></i>
+                    <a href="#" class="text-decoration-none">
+                      <div class="d-flex flex-column">
+                        <div class="font-size-12 text-red">Lecture</div>
+                        <div class="font-size-12 text-gray">CS4550.12631.202410</div>
+                        <div class="font-size-12  text-gray">Sept 11th @11:45am</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="d-flex flex-row mt-2">
+                    <i class="fa-regular fa-calendar me-3"></i>
+                    <a href="#" class="text-decoration-none">
+                      <div class="d-flex flex-column">
+                        <div class="font-size-12 text-red">Lecture</div>
+                        <div class="font-size-12 text-gray">CS4550.12631.202410</div>
+                        <div class="font-size-12  text-gray">Sept 11th @11:45am</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="d-flex flex-row mt-2">
+                    <i class="fa-regular fa-calendar me-3"></i>
+                    <a href="#" class="text-decoration-none">
+                      <div class="d-flex flex-column">
+                        <div class="font-size-12 text-red">Lecture</div>
+                        <div class="font-size-12 text-gray">CS4550.12631.202410</div>
+                        <div class="font-size-12  text-gray">Sept 11th @11:45am</div>
+                      </div>
+                    </a>
+                  </div>
+                    <a href="#" class="mt-2 text-red font-size-12 text-decoration-none">
+                      12 more in the next week
+                    </a>
+                </div>
+            </div>
+          </div>
+       
+        </div>
+      </div>
+  </body>
+</html>

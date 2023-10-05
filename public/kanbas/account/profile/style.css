@@ -1,0 +1,47 @@
+.profile-name{
+  font-size:1.8em;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.profile-icon {
+  color:gray;
+  display: flex;
+  flex-direction: row;
+  border-color: gray;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+  height:150px;
+  width:150px;
+  font-size:100px;
+  line-height: 100px;
+  justify-content: center; 
+  align-items: center;
+  overflow:hidden;
+}
+
+.profile-description-title {
+  font-size:25px;
+  font-weight: 300;
+  margin: 6px 6px 0px 0px;
+  padding: 12px 12px 0px 0px;
+  
+}
+
+.profile-description-body {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+
+
+.profile-link {
+  color:  rgb(181, 40, 40);
+  text-decoration: none;
+}
+
+.profile-link:hover {
+  color:  rgb(181, 40, 40);
+  text-decoration: underline;
+}

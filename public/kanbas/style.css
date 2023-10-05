@@ -1,0 +1,41 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.btn-secondary {
+  color:rgb(45, 59, 69);
+  background:rgb(232, 232, 232);
+  border-color: rgb(199, 205, 209);
+  border-radius: 3px;
+}
+
+.btn-danger {
+  color: white;
+  background-color: rgb(181, 40, 40);
+  border-color: rgb(199, 205, 209);
+  border-radius: 3px;
+}
+
+.red-icon {
+  color: rgb(197, 9, 9);
+  -webkit-text-stroke: 10px background-color;
+}
+
+.text-red {
+  color: rgb(181, 40, 40)
+}
+
+.text-gray {
+  color: lightgray
+}
+
+.gray-background {
+  background-color: rgb(198, 202, 198);
+}
+
+a:hover {
+  color: rgb(181, 40, 40);
+  text-decoration: none;
+}
+
