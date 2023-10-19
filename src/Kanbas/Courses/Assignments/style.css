@@ -1,0 +1,33 @@
+.fa-circle-check {
+  color:green;
+}
+
+.green-left-border {
+  border-left: 5px solid green;
+}
+
+.border {
+  border-style: solid;
+  border-color: black;
+  border-width: 20px;
+}
+
+.fa-circle-check, .assignment-icon {
+  color:green;
+}
+
+.btn-secondary {
+  color:black;
+  background-color: lightgray;
+}
+
+.assignment-title{
+  color:black;
+  font-size:15px;
+  font-weight: bolder;
+}
+
+.assignment-module, .assignment-due-date {
+  font-size: 12px;
+  color: gray;
+}

@@ -1,0 +1,71 @@
+.sidebar{
+  display: flex;
+  width: 85px;
+  height: 100vh;
+  position:fixed;
+  background-color: black;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  align-items: center;
+  z-index: 100; 
+  overflow: hidden;
+}
+
+.sidebar-item{
+  background-color: black;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color:  whitesmoke;
+  width: 85px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.sidebar-item-active{
+  color: red;
+  background-color: white;
+  
+}
+
+.northeastern-icon{
+  margin: 0px;
+  margin-top:10px;
+  padding: 0px;
+  max-width: 80%;
+  height: auto;
+  text-align: center;
+  align-self: center;
+}
+
+.sidebar-item-icon{
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 7px;
+  color: rgb(197, 9, 9);
+  font-size:25px;
+}
+
+.account{
+  font-size: 40px;
+}
+
+.sidebar-item-text{
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 14px;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.border{
+  border: 1px white solid;
+}

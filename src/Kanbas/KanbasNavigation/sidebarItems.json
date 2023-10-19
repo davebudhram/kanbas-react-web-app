@@ -1,0 +1,12 @@
+[
+  { "title": "Account", "icon": "circle-user"},
+  { "title": "Dashboard", "icon": "fa-solid fa-gauge"},
+  { "title": "Courses", "icon": "fa-solid fa-book"},
+  { "title": "Calendar", "icon": "fa-solid fa-calendar-days"},
+  { "title": "Inbox", "icon": "fa-solid fa-inbox"},
+  { "title": "History", "icon": "fa-clock"},
+  { "title": "Studio", "icon": "fa-solid fa-tv"},
+  { "title": "Commons", "icon": "fa-solid fa-circle-arrow-right"},
+  { "title": "Help", "icon": "fa-circle-question"}
+ ]
+ 
