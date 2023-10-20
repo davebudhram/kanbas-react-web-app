@@ -7,6 +7,7 @@ import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
+import Grades from "./Grades";
 import Home from "./Home";
 import './style.css'
 
@@ -38,6 +39,10 @@ function Courses() {
             {(path.includes('Modules') || path.includes('Home')) &&
               <li className="breadcrumb-item active">
                 Modules
+              </li>}
+            {(path.includes('Grade')) &&
+              <li className="breadcrumb-item active">
+                Grades
               </li>}
             {path.includes('Assignments') && (myArray.length !== 6) &&
               <li className="breadcrumb-item active">
@@ -79,7 +84,7 @@ function Courses() {
               path="Assignments/:assignmentId"
               element={<AssignmentEditor />}
             />
-            <Route path="Grades" element={<h1>Grades</h1>} />
+            <Route path="Grades" element={<Grades />} />
           </Routes>
         </div>
       </div>
