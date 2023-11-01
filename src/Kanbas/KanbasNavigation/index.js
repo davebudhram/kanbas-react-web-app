@@ -7,7 +7,6 @@ import sideBarItems from "./sidebarItems.json"
 import northeastern_logo_icon from './northeastern_logo_icon.png'; // Tell webpack this JS file uses this image
 import './style.css'
 function KanbasNavigation() {
-  const links = ["Account", "Dashboard", "Courses", "Calendar"];
   const linkIcons = [faCircleUser, faGauge, faBook, faCircleUser, faCalendarDays, faInbox, faClock, faTv, faCircleArrowRight, faQuestionCircle]
   linkIcons.forEach(icon => {
     library.add(icon);

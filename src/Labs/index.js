@@ -1,22 +1,45 @@
 import Assignment3 from "./a3";
-import JavaScript from "./a3/Javascript";
+// import JavaScript from "./a3/Javascript";
 import Nav from "../Nav";
-import PathParameters from "./a3/PathParameters";
-import Classes from "./a3/Classes";
-import Styles from "./a3/Styles";
-import ConditionalOutput from "./a3/ConditionalOutput";
-import TodoList from "./a3/todo/TodoList";
+// import PathParameters from "./a3/PathParameters";
+// import Classes from "./a3/Classes";
+// import Styles from "./a3/Styles";
+// import ConditionalOutput from "./a3/ConditionalOutput";
+// import TodoList from "./a3/todo/TodoList";
+import store from "./Store";
+import { Provider } from "react-redux";
+
+import { Routes, Route, Navigate } from "react-router";
+import Assignment4 from "./a4";
+
 export default function Labs() {
+
+
   return (
     <div>
-      <Nav />
-      <Assignment3 />
+      <Provider store={store}>
+        <Nav />
+        <div onMouseDown={(event) => console.log(event.nativeEvent.offsetX)}>Hello</div>
+        <button onMouseDown={(event) => console.log(event.nativeEvent.offsetX)}>Hello</button>
+        <Routes>
+          <Route path="/"
+            element={<Navigate to="a3" />} />
+          <Route path="a3" element={<Assignment3 />} />
+          <Route path="a4"
+            element={<Assignment4 />} />
+        </Routes>
+
+
+
+      </Provider>
+
+      {/* <Assignment3 />
       <JavaScript />
       <PathParameters />
       <Classes />
       <Styles />
       <ConditionalOutput />
-      <TodoList />
+      <TodoList /> */}
     </div>
   );
 }

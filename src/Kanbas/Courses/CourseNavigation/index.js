@@ -7,7 +7,7 @@ export default function CourseNavigation() {
   const { pathname } = useLocation();
   return (
     <div className="navigation-sidebar">
-      <div class="navigation-sidebar-course">
+      <div className="navigation-sidebar-course">
         {courseId}
       </div>
       {links.map((link, index) => (

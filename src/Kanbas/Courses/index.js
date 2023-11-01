@@ -12,17 +12,17 @@ import Home from "./Home";
 import './style.css'
 
 
-function Courses() {
+function Courses({ courses }) {
+  console.log(courses);
   const { courseId } = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
   const barsStyle = {
-    'font-size': '30px'
+    'fontSize': '30px'
   }
 
   const path = useLocation().pathname
-  console.log(path)
+
   const myArray = path.split("/");
-  console.log(myArray)
 
   return (
     <>
@@ -30,7 +30,7 @@ function Courses() {
 
         <FontAwesomeIcon icon={faBars} className="red-icon ms-1 me-4" style={barsStyle} />
         <nav aria-label="breadcrumb" className="mt-3 breadcrumb-nav">
-          <ol class="breadcrumb">
+          <ol className="breadcrumb">
             <li className="breadcrumb-item">
               <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="text-red">
                 {course.name}
@@ -64,7 +64,7 @@ function Courses() {
 
           </ol>
         </nav>
-        <button type="button" class="btn btn-secondary ms-auto" onclick="">
+        <button type="button" className="btn btn-secondary ms-auto">
           <FontAwesomeIcon icon={faGlasses} className="me-1" />
           Student View
         </button>

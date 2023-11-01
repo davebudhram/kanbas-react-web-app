@@ -1,30 +1,33 @@
 import React from "react";
-import { useNavigate, useParams, Link } from "react-router-dom";
-import db from "../../../Database";
+import { useParams, Link } from "react-router-dom";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import "./style.css"
-export default function AssignmentEditor() {
+import { useSelector, useDispatch } from "react-redux";
+import { addAssignment } from "../assignmentsReducer";
+export default function AssignmentEditor({ addOrEdit }) {
   library.add(faCircleCheck, faEllipsisV);
-  const { courseId, assignmentId } = useParams();
-  const assignment = db.assignments.find(
-    (assignment) => assignment._id === assignmentId);
-  console.log(courseId);
-  // console.log(assignmentId);
+  const dispatch = useDispatch();
+
+  const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+  const { courseId } = useParams();
+  const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+  // const assignment = assignments.find(
+  //   (assignment) => assignment._id === assignmentId);
 
   function handleSave() {
-    console.log("Save assignment");
+    dispatch(addAssignment({}))
   }
 
   return (
     <>
-      <div class="d-flex flex-row justify-content-end align-items-center mb-3">
-        <div class="me-3">
+      <div className="d-flex flex-row justify-content-end align-items-center mb-3">
+        <div className="me-3">
           <FontAwesomeIcon icon="check-circle" className="green-check me-1" />
           Published
         </div>
-        <button type="button" class="btn btn-secondary" onclick>
+        <button type="button" className="btn btn-secondary" onclick>
           <FontAwesomeIcon icon="ellipsis-vertical" />
         </button>
       </div>
@@ -38,7 +41,7 @@ export default function AssignmentEditor() {
           id="assignment-name"
           placeholder="Enter assignment name" value={assignment.name} />
       </div>
-      <hr class="mb-3" />
+      <hr className="mb-3" />
       <div className="d-flex flex-row justify-content-end">
         <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
           className="btn btn-secondary me-2">

@@ -23,9 +23,10 @@ export default function Assignments() {
         <button type="button" class="btn btn-secondary ms-auto me-2" onclick="">
           <FontAwesomeIcon icon={faPlus} className="me-2" /> Group
         </button>
-        <button type="button" class="btn btn-danger me-2" onclick="">
+        <Link to={`/Kanbas/Courses/${courseId}/Assignments/`}
+          className="btn btn-danger me-2">
           <FontAwesomeIcon icon={faPlus} className="me-2" /> Assignment
-        </button>
+        </Link>
         <button type="button" class="btn btn-secondary" onclick="">
           <FontAwesomeIcon icon={faEllipsisV} className="" />
         </button>
