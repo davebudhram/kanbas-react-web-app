@@ -19,8 +19,6 @@ export default function Labs() {
     <div>
       <Provider store={store}>
         <Nav />
-        <div onMouseDown={(event) => console.log(event.nativeEvent.offsetX)}>Hello</div>
-        <button onMouseDown={(event) => console.log(event.nativeEvent.offsetX)}>Hello</button>
         <Routes>
           <Route path="/"
             element={<Navigate to="a3" />} />

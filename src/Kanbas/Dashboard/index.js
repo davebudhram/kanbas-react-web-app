@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import db from "../Database";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEllipsisV, faPlus } from "@fortawesome/free-solid-svg-icons";
 import "./style.css"; // Stylesheet for this component
@@ -9,50 +8,6 @@ export default function Dashboard({ courses, course, setCourse, addNewCourse,
   deleteCourse, updateCourse }
 ) {
   const [addUpdate, setAddUpdate] = useState(false); // true if updating, false if adding
-  // const [courses, setCourses] = useState(db.courses);
-
-  // const [course, setCourse] = useState({
-  //   name: "",
-  //   number: "",
-  //   startDate: "",
-  //   endDate: "",
-  // });
-
-  // Adds a course with the entered fields
-  // const addNewCourse = () => {
-  //   setCourses([
-  //     ...courses,
-  //     {
-  //       ...course,
-  //       _id: new Date().getTime(),
-  //     },
-  //   ]);
-  //   setCourse({
-  //     name: "",
-  //     number: "",
-  //     startDate: "",
-  //     endDate: "",
-  //   });
-  // };
-
-  // const updateCourse = () => {
-  //   setCourses(
-  //     courses.map((c) => {
-  //       if (c._id === course._id) {
-  //         return course;
-  //       } else {
-  //         return c;
-  //       }
-  //     })
-  //   );
-  // };
-
-
-  // Deletes a course with the given courseId
-  // const deleteCourse = (courseId) => {
-  //   setCourses(courses.filter((course) => course._id !== courseId));
-  // };
-
 
   return (
     <>

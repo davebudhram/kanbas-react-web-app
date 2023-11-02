@@ -11,6 +11,8 @@ import ObjectStateVariable from "./ObjectStateVariable"
 import ArrayStateVariable from "./ArrayStateVariable"
 import ParentStateComponent from "./ParentStateComponent"
 import ReduxExamples from "./ReduxExamples/HelloRedux"
+import TodoList from './ReduxExamples/todos/TodoList'
+import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Assignment4() {
   function sayHello() {
     alert('Hello')
@@ -30,5 +32,6 @@ export default function Assignment4() {
     <ArrayStateVariable />
     <ParentStateComponent />
     <ReduxExamples />
+    <TodoList />
   </>
 }
