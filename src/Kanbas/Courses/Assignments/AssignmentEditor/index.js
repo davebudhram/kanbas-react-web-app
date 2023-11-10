@@ -4,20 +4,17 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import "./style.css"
-import { useSelector, useDispatch } from "react-redux";
-import { addAssignment } from "../assignmentsReducer";
-export default function AssignmentEditor({ addOrEdit }) {
+import db from "../../../Database";
+export default function AssignmentEditor() {
   library.add(faCircleCheck, faEllipsisV);
-  const dispatch = useDispatch();
-
-  const assignments = useSelector((state) => state.assignmentsReducer.assignments);
-  const { courseId } = useParams();
-  const assignment = useSelector((state) => state.assignmentsReducer.assignment);
-  // const assignment = assignments.find(
-  //   (assignment) => assignment._id === assignmentId);
+  const { courseId, assignmentId } = useParams();
+  const assignment = db.assignments.find(
+    (assignment) => assignment._id === assignmentId);
+  console.log(courseId);
+  // console.log(assignmentId);
 
   function handleSave() {
-    dispatch(addAssignment({}))
+    console.log("Save assignment");
   }
 
   return (
