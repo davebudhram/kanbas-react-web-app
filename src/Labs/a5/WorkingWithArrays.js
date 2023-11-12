@@ -3,8 +3,6 @@ import React, { useState } from "react";
 function WorkingWithArrays() {
   const API = "http://localhost:4000/a5/todos";
   const [todo, setTodo] = useState({ id: 0, title: '', completed: false, description: '' });
-  const [todoId, setTodoId] = useState(0);
-
   return (
     <div>
       <h3>Working with Arrays</h3>
@@ -65,7 +63,7 @@ function WorkingWithArrays() {
       />
       <h4>Updating an Item in an Array</h4>
       <a
-        href={`${API}/${todoId}}/title/${todo.title}`}
+        href={`${API}/${todo.id}}/title/${todo.title}`}
         className="btn btn-primary me-2" >
         Update Title to {todo.title}
       </a>
