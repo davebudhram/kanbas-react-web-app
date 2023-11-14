@@ -9,13 +9,28 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import Home from "./Home";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import './style.css'
 
 
-function Courses({ courses }) {
-  console.log(courses);
+function Courses() {
+  const URL = "http://localhost:4000/api/courses";
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const [course, setCourse] = useState({});
+  const [assignments, setAssignments] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(
+      `${URL}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
+
   const barsStyle = {
     'fontSize': '30px'
   }

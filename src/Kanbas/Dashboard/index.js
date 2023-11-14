@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEllipsisV, faPlus } from "@fortawesome/free-solid-svg-icons";
 import "./style.css"; // Stylesheet for this component
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 export default function Dashboard({ courses, course, setCourse, addNewCourse,
   deleteCourse, updateCourse }
 ) {

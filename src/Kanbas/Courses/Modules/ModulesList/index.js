@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,7 +9,10 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules
 } from "./modulesReducer";
+import { findModulesForCourse, createModule } from "../client";
+import * as client from "../client";
 
 import './style.css'
 
@@ -23,8 +26,37 @@ function ModuleList() {
   const [linkIndex, setLinkIndex] = useState(-1)
   const dispatch = useDispatch();
 
-  function updateLink() {
-    dispatch(updateModule({
+
+  const handleAddModule = () => {
+    createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async (moduleToUpdate) => {
+    const newModule = await client.updateModule(moduleToUpdate);
+    dispatch(updateModule(newModule));
+  };
+
+
+
+  useEffect(() => {
+    findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+      );
+
+  }, [courseId, dispatch]);
+
+
+  async function updateLink() {
+    await handleUpdateModule({
       ...module, links: module.links.map((value, index) => {
         if (index === linkIndex) {
           return link
@@ -32,7 +64,7 @@ function ModuleList() {
           return value
         }
       })
-    }))
+    })
   }
 
   // function deleteLink() {
@@ -78,7 +110,7 @@ function ModuleList() {
             <div className="modal-footer">
               {modalState === 'addModuleTitle' && <button
                 type='submit'
-                onClick={() => dispatch(addModule({ ...module, courseId: courseId }))}
+                onClick={handleAddModule}
                 className='btn btn-primary'
                 data-bs-dismiss="modal"
               >
@@ -87,7 +119,7 @@ function ModuleList() {
               }
               {modalState === 'updateModuleTitle' && <button
                 type='submit'
-                onClick={() => dispatch(updateModule(module))}
+                onClick={async () => await handleUpdateModule(module)}
                 className='btn btn-primary'
                 data-bs-dismiss="modal"
               >
@@ -96,7 +128,7 @@ function ModuleList() {
               }
               {modalState === 'addModuleLink' && <button
                 type='submit'
-                onClick={(e) => { dispatch(updateModule({ ...module, links: [...module.links, link] })); setLink(""); setLinkIndex(-1) }}
+                onClick={(e) => { handleUpdateModule({ ...module, links: [...module.links, link] }); setLink(""); setLinkIndex(-1) }}
                 className='btn btn-primary'
                 data-bs-dismiss="modal"
               >
@@ -154,7 +186,7 @@ function ModuleList() {
       <hr className="mb-3" />
 
       <div className="module">
-        {modules.filter(module => module.courseId === courseId).map((module, index) => (
+        {modules.map((module, index) => (
           <ul key={module._id} className="list-group mb-3 mt-0 ps-0">
             <li key={index} className="list-group-item d-flex flex-row align-items-center p-3 gray-background ">
               <FontAwesomeIcon icon={faEllipsisV} className="ms-1 me-1" />
@@ -175,7 +207,7 @@ function ModuleList() {
                   setModalState('updateModuleTitle')
                   dispatch(setModule(module));
                 }} >Edit</li>
-                <li className="dropdown-item" onClick={() => dispatch(deleteModule(module._id))}>Delete</li>
+                <li className="dropdown-item" onClick={() => handleDeleteModule(module._id)}>Delete</li>
               </ul>
             </li>
             {module.links.map((link, index2) => (
@@ -195,7 +227,7 @@ function ModuleList() {
                     dispatch(setModule(module));
                   }} >Edit</li>
 
-                  <li className="dropdown-item" onClick={() => { dispatch(updateModule({ ...module, links: module.links.filter((value, i) => i !== index2) })) }}>Delete</li>
+                  <li className="dropdown-item" onClick={async () => { await handleUpdateModule({ ...module, links: module.links.filter((value, i) => i !== index2) }) }}>Delete</li>
                 </ul>
               </li>
             ))
