@@ -15,7 +15,8 @@ import './style.css'
 
 
 function Courses() {
-  const URL = "http://localhost:4000/api/courses";
+  const API_BASE = process.env.REACT_APP_API_BASE || 'https://kanbas-node-server-app-rmdp.onrender.com/api';
+  const URL = `${API_BASE}/courses`;
   const { courseId } = useParams();
   const [course, setCourse] = useState({});
   const [assignments, setAssignments] = useState({});
