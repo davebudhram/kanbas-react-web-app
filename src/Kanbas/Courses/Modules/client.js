@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const COURSES_URL = "http://localhost:4000/api/courses";
+const COURSES_URL = "https://kanbas-node-server-app-cs1234-sp23.onrender.com/api/courses";
+const MODULES_URL = 'https://kanbas-node-server-app-cs1234-sp23.onrender.com/api/modules';
 /**
  * 
  * @param  courseId 
@@ -27,7 +28,6 @@ export const createModule = async (courseId, module) => {
   return response.data;
 };
 
-const MODULES_URL = "http://localhost:4000/api/modules";
 /**
  * Deletes a module witht the given module id
  * @param {*} moduleId 
