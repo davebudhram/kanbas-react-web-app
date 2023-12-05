@@ -25,11 +25,16 @@ function Kanbas() {
     endDate: "",
   });
 
+
+  const request = axios.create({
+    withCredentials: true,
+  });
+
   /**
    * Adds a new course to the backend
    */
   const addNewCourse = async () => {
-    const response = await axios.post(URL, course);
+    const response = await request.post(URL, course);
     setCourses([
       ...courses,
       response.data,
@@ -44,7 +49,7 @@ function Kanbas() {
 
   const updateCourse = async () => {
     console.log(course);
-    const response = await axios.put(
+    const response = await request.put(
       `${URL}/${course._id}`,
       course
     );
@@ -64,7 +69,7 @@ function Kanbas() {
    * @param courseID 
    */
   const deleteCourse = async (courseID) => {
-    await axios.delete(
+    await request.delete(
       `${URL}/${courseID}`
     );
     setCourses(courses.filter(
@@ -83,7 +88,7 @@ function Kanbas() {
   * Gets and sets all the courses from backend
   */
     const findAllCourses = async () => {
-      const response = await axios.get(URL);
+      const response = await request.get(URL);
       setCourses(response.data);
     };
     findAllCourses();

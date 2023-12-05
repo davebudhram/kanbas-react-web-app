@@ -3,6 +3,9 @@ const API_BASE = process.env.REACT_APP_API_BASE || 'https://kanbas-node-server-a
 const MODULES_URL = `${API_BASE}/modules`;
 const COURSES_URL = `${API_BASE}/courses`;
 
+const request = axios.create({
+  withCredentials: true,
+});
 
 /**
  * 
@@ -10,7 +13,7 @@ const COURSES_URL = `${API_BASE}/courses`;
  * @returns 
  */
 export const findModulesForCourse = async (courseId) => {
-  const response = await axios.get(`${COURSES_URL}/${courseId}/modules`);
+  const response = await request.get(`${COURSES_URL}/${courseId}/modules`);
   return response.data;
 };
 
@@ -23,7 +26,7 @@ export const findModulesForCourse = async (courseId) => {
 export const createModule = async (courseId, module) => {
   console.log('here')
   console.log(courseId)
-  const response = await axios.post(
+  const response = await request.post(
     `${COURSES_URL}/${courseId}/modules`,
     module
   );
@@ -36,7 +39,7 @@ export const createModule = async (courseId, module) => {
  * @returns 
  */
 export const deleteModule = async (moduleId) => {
-  const response = await axios
+  const response = await request
     .delete(`${MODULES_URL}/${moduleId}`);
   return response.data;
 };
@@ -47,7 +50,7 @@ export const deleteModule = async (moduleId) => {
  * @returns 
  */
 export const updateModule = async (module) => {
-  const response = await axios.put(`${MODULES_URL}/${module._id}`, module);
+  const response = await request.put(`${MODULES_URL}/${module._id}`, module);
   return response.data;
 };
 

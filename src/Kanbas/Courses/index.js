@@ -20,8 +20,11 @@ function Courses() {
   const { courseId } = useParams();
   const [course, setCourse] = useState({});
   const [assignments, setAssignments] = useState({});
+  const request = axios.create({
+    withCredentials: true,
+  });
   const findCourseById = async (courseId) => {
-    const response = await axios.get(
+    const response = await request.get(
       `${URL}/${courseId}`
     );
     setCourse(response.data);
