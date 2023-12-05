@@ -1,6 +1,6 @@
 import axios from "axios";
 const BASE_API = process.env.REACT_APP_API_BASE || 'https://kanbas-node-server-app-rmdp.onrender.com/api';
-const URL = `${BASE_API}/api/users`;
+const URL = `${BASE_API}/users`;
 
 const request = axios.create({
   withCredentials: true,
