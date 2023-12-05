@@ -5,7 +5,7 @@ import axios from "axios";
 export const BASE_API = 'http://localhost:4000';
 export const USERS_API = `${BASE_API}/api/users`;
 
-const API_BASE = USERS_API || 'https://kanbas-node-server-app-rmdp.onrender.com/api';
+const API_BASE = 'https://kanbas-node-server-app-rmdp.onrender.com/api';
 const URL = `${API_BASE}`;
 const request = axios.create({
   withCredentials: true,
