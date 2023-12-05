@@ -13,6 +13,8 @@ import UserTable from "./Users/table";
 import Signup from "./Users/signup";
 
 function Kanbas() {
+  const API_BASE = process.env.REACT_APP_API_BASE || 'https://kanbas-node-server-app-rmdp.onrender.com/api';
+  const URL = `${API_BASE}/courses`;
   const [courses, setCourses] = useState([]);
 
   const [course, setCourse] = useState({
@@ -69,21 +71,23 @@ function Kanbas() {
       (c) => c._id !== courseID));
   };
 
-  const API_BASE = process.env.REACT_APP_API_BASE || 'https://kanbas-node-server-app-rmdp.onrender.com/api';
-  const URL = `${API_BASE}/courses`;
-  // const URL = 'https://kanbas-node-server-app-rmdp.onrender.com/api/courses';
 
-  /**
-   * Gets and sets all the courses from backend
-   */
-  const findAllCourses = async () => {
-    const response = await axios.get(URL);
-    setCourses(response.data);
-  };
+
+
+
+
+
 
   useEffect(() => {
+    /**
+  * Gets and sets all the courses from backend
+  */
+    const findAllCourses = async () => {
+      const response = await axios.get(URL);
+      setCourses(response.data);
+    };
     findAllCourses();
-  }, []);
+  }, [URL]);
 
 
   return (
